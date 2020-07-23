@@ -1,6 +1,7 @@
 body 
     +light
     color: $text-color
+    overflow-x: hidden
 img
     max-width: 100%
 .section
@@ -52,6 +53,41 @@ input[type="checkbox"]
     display: none
     &:checked + label:before
             background-color: $primary
+.select
+    height: 80px
+    width: 100%
+    border: 1px solid #dddddd
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        transform: translateY(-50%)
+        top: 50%
+        right: 20px
+        width: 20px
+        height: 20px
+        background: url('../img/arrow-down.png') no-repeat center
+    &:hover
+        cursor: pointer
+    &_checked
+        line-height: 80px
+        padding-left: 30px
+    &__dropdown
+        position: absolute
+        top: 80px
+        width: 100%
+        background-color: #fff
+        border: 1px solid #dddddd
+        margin: 0
+        list-style: none
+        padding: 0
+        display: none
+        &_open
+            display: block
+    &__option
+        padding: 20px
+        &:hover
+            background-color: $bg-secondary
 .checkbox
     &-label
         display: flex

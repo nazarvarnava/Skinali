@@ -25,7 +25,7 @@
         text-decoration: none
 .menu
     position: fixed
-    z-index: 0
+    z-index: 100
     top: 80px
     left: 0
     padding: 16px 0
@@ -58,6 +58,10 @@
         border-left: 1px solid rgba(#510bba, .1)
         height: 80px
         width: 70px
+        &:hover
+            cursor: pointer
+        &:focus
+            outline: none
         &__line 
             display: block
             width: 20px
@@ -80,9 +84,6 @@
     .navbar
         &__mobile, &__landline
             display: none
-@media (max-width: 576px)
-    .logo
-        display: none
     .menu
         top: 60px
         &__nav
@@ -91,3 +92,7 @@
             margin-bottom: 20px
         &-button
             height: 60px
+@media (max-width: 576px)
+    .logo
+        display: none
+    
